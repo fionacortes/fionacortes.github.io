@@ -24,14 +24,7 @@
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="transition">
-          <div class="cover cover1"></div>
-          <div class="cover cover2"></div>
-          <div class="cover cover3"></div>
-    </div>
-
+    
     <nav class="navigation">
         <!--logo------------>
         <a href="#" class="logo">
@@ -259,18 +252,6 @@
             }
         });
     });
-
-    /*transition*/ 
-    const link = document.querySelector(".link");
-    const transition = document.querySelector(".transition");
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        transition.classList.add("slide");
-        setTimeout(() => {
-            window.location = link.href;
-        }, 900);
-    });
-
 
     </script>
 
