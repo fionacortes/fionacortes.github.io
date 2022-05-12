@@ -166,3 +166,9 @@ a{
         opacity: 1;
     }
 }
+
+img {
+    width: 275px;
+    height: 300px;
+    object-fit: cover;
+  }
