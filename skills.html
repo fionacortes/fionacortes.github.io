@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Fiona Cortes</title>
+
+<!--==Stylesheet======================-->
+<link rel="stylesheet" type="text/css" href="skillcss/style.css"/>
+<link href="styles.css" rel="stylesheet">
+<script defer src="script.js"></script>
+<!--==Lightbox.css====================-->
+<link rel="stylesheet" href="foliocss/lightbox.min.css">
+<link rel="stylesheet" href="loading.css">
+
+<!--==Favicon=========================-->
+<link rel="shortcut icon" href="images/fav-icon.png"/>
+
+<!--JetBrains-font----------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <nav class="navigation">
+        <!--logo------------>
+        <a href="#" class="logo">
+            <img src="images/FC.png"/>
+        </a>
+        <!--menu-btn------->
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+        </label>
+        <!--menu------------->
+        <ul class="menu">
+            <li><a href="index.html" class="link">HOME</a></li>
+            <li><a href="skills.html" class="link">SKILLS</a></li>
+            <li><a href="portfolio.html" class="link">WORKS</a></li>
+            <li><a data-modal-target="#modal">ABOUT</a></li>
+        </ul>
+        <!--nav-2------------------>
+        <nav class="nav-2">
+            <!--menu------->
+            <ul class="menu-2">
+                <li><a href="index.html" class="link">HOME</a></li>
+                <li><a href="skills.html" class="link">SKILLS</a></li>
+                <li><a href="portfolio.html" class="link">WORKS</a></li>
+                <li><a data-modal-target="#modal">ABOUT</a></li>
+            </ul>
+        </nav>
+    </nav>
+
+
+
+
+    <!--==Project-section===============================================-->
+    <section id="project">
+
+        <!--heading------------->
+        <div class="project-heading">
+            <strong>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎<span class="type"></span></strong>
+            <h3>My Projects</h3>
+        </div>
+
+		<img src = "images/SKILLS.png">
+            
+
+
+
+
+
+        </div>
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="modal-header">
+          <div class="title"></div>
+          <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="column left">
+                    <img src="images/profilepic.png">
+                </div>
+                <div class="column right">
+                  <h2>Fiona Cortes</h2>
+                  <p>My name is Fiona, a 17-year-old  computer programming student in CIIT SHS who enjoys playing games and reading novels on my free time who strives to become a game designer in the future.
+                    <br>
+                    <br>Drawing, coding, and writing stories are some of my hobbies, and I dream to create games where I can tell the story of my own characters, and will do my best to make it come true!
+                    <br>
+                    <br>You can contact me at:
+                    <br><u>mariefionacortes@gmail.com</u>
+                  </p>
+                </div>
+              </div>
+              
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+
+
+
+    <!--==Using JQuery=================================-->
+    <script src="js/JQuery.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/typed.min.js"></script>
+
+
+
+
+
+    <script type="text/javascript">
+/*--type---------------------------------*/
+        var typed = new Typed('.type', {
+
+    strings: ['‎‎ Illustrations', '‎ ‎Game Engines','‎‎‎‎‎‎ ‎‎ ‎‎ Programming'],
+    typeSpeed:100,
+    backSpeed:70,
+    loop:true,
+    });
+
+    /*--for-filter-menu---------------------------------*/
+        $(document).on('click','.project-filter li',function(){
+            $(this).addClass('project-filter-active').siblings().removeClass('project-filter-active')
+        });
+    
+    /*--for-project/work-filter-------------------------*/
+    $(document).ready(function(){
+        $('.list').click(function(){
+            const value = $(this).attr('data-filter');
+            if(value == 'all'){
+                $('.project-box').show('1000');
+            }
+            else{
+                $('.project-box').not('.'+value).hide('1000');
+                $('.project-box').filter('.'+value).show('1000');
+            }
+        });
+    });
+
+    </script>
+
+
+</body>
+
+</html>
