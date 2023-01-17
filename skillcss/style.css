@@ -8,6 +8,9 @@
 a{
     text-decoration: none;
 }
+a:link {
+  color: #FFB6C1;
+}
 ul{
     list-style: none;
 }
